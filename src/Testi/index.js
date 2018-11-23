@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 class Testi extends Component {
   render() {
-    console.log(this.props.data);
-    return <div>&lt;p&gt;&lt;p&gt;</div>;
+    const { data } = this.props;
+    return <div>&lt;p&gt;{data.citation}&lt;p&gt;</div>;
   }
 }
 

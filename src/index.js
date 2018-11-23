@@ -9,12 +9,14 @@ class App extends Component {
   };
 
   handleInput = (name, value) => {
-    this.setState(prevState => ({ ...prevState, [name]: value }));
+    this.setState(prevState => ({
+      ...prevState,
+      data: { ...prevState["data"], [name]: value }
+    }));
   };
 
   render() {
-    const { data } = this.state.data;
-    console.log(data);
+    const { data } = this.state;
     return (
       <div>
         <Form handleInput={this.handleInput} />
